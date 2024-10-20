@@ -1,4 +1,4 @@
 class DirectorsController < ApplicationController
-  def new
+  def index
   end
 end

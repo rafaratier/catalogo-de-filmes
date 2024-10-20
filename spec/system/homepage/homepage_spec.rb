@@ -1,21 +1,21 @@
 require 'rails_helper'
 
-describe "User access the Home Page" do
-  it "and can navigate to a page for adding a new movie" do
+describe 'User accesses the home page' do
+  it 'and can navigate to the page for viewing all the movies' do
     visit root_path
-    click_link "add a new Movie"
-    expect(page).to have_current_path('/movies/new')
+    click_link 'Movies'
+    expect(page).to have_current_path('/movies')
   end
 
-  it "and can navigate to a page for adding a new movie genre" do
+  it 'and can navigate to the page for viewing all the movie genres' do
     visit root_path
-    click_link "add a new Genre"
-    expect(page).to have_current_path('/genres/new')
+    click_link 'Genres'
+    expect(page).to have_current_path('/genres')
   end
 
-  it "and can navigate to a page for adding a new director" do
+  it 'and can navigate to the page for viewing all the movie directors' do
     visit root_path
-    click_link "add a new Director"
-    expect(page).to have_current_path('/directors/new')
+    click_link 'Directors'
+    expect(page).to have_current_path('/directors')
   end
 end
