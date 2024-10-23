@@ -1,5 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>Director</h1>
 <%= render @director %>
 
 <div>
@@ -8,3 +9,6 @@
 
   <%= button_to "Destroy this director", @director, method: :delete %>
 </div>
+
+<h2>Movies</h2>
+<%= render partial: "shared/movie_card" %>

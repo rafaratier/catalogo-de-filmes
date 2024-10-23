@@ -8,6 +8,7 @@ class GenresController < ApplicationController
 
   # GET /genres/1
   def show
+    @movies = Movie.where(params[:id])
   end
 
   # GET /genres/new

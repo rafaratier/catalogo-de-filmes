@@ -8,6 +8,7 @@ class DirectorsController < ApplicationController
 
   # GET /directors/1
   def show
+    @movies = Movie.where(params[:id])
   end
 
   # GET /directors/new

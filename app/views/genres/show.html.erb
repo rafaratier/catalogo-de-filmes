@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>Genre</h1>
+
 <%= render @genre %>
 
 <div>
-  <%= link_to "Edit this genre", edit_genre_path(@genre) %> |
-  <%= link_to "Back to genres", genres_path %>
+  <%= link_to "Back to genres", genres_path %> |
+  <%= link_to "Edit this genre", edit_genre_path(@genre) %>
 
   <%= button_to "Destroy this genre", @genre, method: :delete %>
 </div>
+
+<h2>Movies</h2>
+
+<%= render partial: "shared/movie_card" %>
