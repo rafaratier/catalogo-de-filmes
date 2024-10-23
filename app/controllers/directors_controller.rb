@@ -13,6 +13,7 @@ class DirectorsController < ApplicationController
 
   # GET /directors/new
   def new
+    @genres = Genre.all
     @director = Director.new
   end
 
@@ -27,6 +28,7 @@ class DirectorsController < ApplicationController
     if @director.save
       redirect_to @director, notice: "Director was successfully created."
     else
+      @genres = Genre.all
       render :new, status: :unprocessable_entity
     end
   end

@@ -37,13 +37,13 @@
   </div>
 
   <div>
-    <%= form.label :genre_id, style: "display: block" %>
-    <%= form.text_field :genre_id %>
+    <%= form.label :genre_id %>
+    <%= form.collection_select :genre_id, @genres, :id, :name, { prompt: 'select genre'} %>
   </div>
 
   <div>
-    <%= form.label :director_id, style: "display: block" %>
-    <%= form.text_field :director_id %>
+    <%= form.label :director_id %>
+    <%= form.collection_select :director_id, @directors, :id, :name, { prompt: 'select director'} %>
   </div>
 
   <div>

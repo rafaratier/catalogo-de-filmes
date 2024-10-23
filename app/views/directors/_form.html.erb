@@ -27,8 +27,8 @@
   </div>
 
   <div>
-    <%= form.label :genre_id, style: "display: block" %>
-    <%= form.text_field :genre_id %>
+    <%= form.label :genre_id %>
+    <%= form.collection_select :genre_id, @genres, :id, :name, { prompt: 'select genre'} %>
   </div>
 
   <div>

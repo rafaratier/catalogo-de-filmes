@@ -12,6 +12,8 @@ class MoviesController < ApplicationController
 
   # GET /movies/new
   def new
+    @genres = Genre.all
+    @directors = Director.all
     @movie = Movie.new
   end
 
@@ -26,6 +28,8 @@ class MoviesController < ApplicationController
     if @movie.save
       redirect_to @movie, notice: "Movie was successfully created."
     else
+      @genres = Genre.all
+      @directors = Director.all
       render :new, status: :unprocessable_entity
     end
   end
