@@ -6,11 +6,5 @@
 
 <%= link_to "New movie", new_movie_path %>
 
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <div>
-      <%= link_to "#{movie.title} #{movie.release_date.strftime("%Y")}", movie %>
-    </div>
-  <%  end %>
-</div>
+<%= render partial: "shared/movie_card" %>
 

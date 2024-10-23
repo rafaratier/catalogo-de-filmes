@@ -1,7 +1,8 @@
 <div id="movies">
   <% @movies.each do |movie| %>
     <div>
-      <%= link_to "#{movie.title} #{movie.release_date.strftime("%Y")}", movie %>
+      <%= link_to "#{movie.release_date.strftime("%y")} #{movie.title}", movie %>
+      <%= render "shared/movie_release_info", movie: movie %>
     </div>
   <%  end %>
 </div>

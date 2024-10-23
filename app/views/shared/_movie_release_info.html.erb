@@ -1,0 +1,7 @@
+<div>
+  <% if movie.release_date <= Date.today %>
+    <p>Released on: <%= movie.release_date %></p>
+  <% else %>
+    <p>Release scheduled for: <%= movie.release_date %></p>
+  <% end %>
+</div>
