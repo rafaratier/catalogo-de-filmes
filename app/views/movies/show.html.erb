@@ -1,6 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @movie %>
+<%= link_to image_tag(@movie.poster.representation(:thumb)), @movie.poster %>
+
+<h1><%= @movie.title %></h1>
+
+  <%= render "shared/movie_release_info", movie: @movie %>
+
+<p><strong>Genre:</strong> <%= @movie.genre.name %></p>
+<p><strong>Director:</strong> <%= @movie.director.name %></p>
+<p><strong>Summary:</strong> <%= @movie.summary %></p>
+<p><strong>Country:</strong> <%= @movie.country %></p>
+<p><strong>Duration:</strong> <%= @movie.duration %></p>
 
 <div>
   <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
